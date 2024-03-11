@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabaio</title>
+    <style>
+      body {
+        padding: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+        background: #7e7e7e;
+        max-width: 400px;
+        margin: auto;
+        align-items: center;
+      }
+
+      p {
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      button {
+        font-size: 1.3rem;
+        padding: 6px 8px;
+        border-radius: 6px;
+      }
+
+      a {
+        color: rgb(55, 55, 172);
+      }
+
+      iframe {
+        margin: 20px 0 20px;
+      }
+
+      img {
+        width: 300px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Mudar cor do texto</button>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui atque,
+      mollitia minus rem voluptatem quis at molestiae deserunt sapiente quaerat
+      laborum dolorem accusamus deleniti aspernatur ullam fuga, unde nemo vel.
+    </p>
+    <a href="https://google.com" target="_blank">Acessar o Google</a>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/buc64u6Q_oA?si=nJPuP6hirXANqFqU"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+
+    <img src="foto.png" alt="cheio de pensamentos violentos" />
+
+    <audio controls src="policia.mp3"></audio>
+
+    <script>
+        const button = document.querySelector("button");
+        const text = document.querySelector("p");
+        let actualColor = "black";
+
+        const changeColor = () => {
+            if (actualColor == "black") {
+                text.style.color = "green";
+                actualColor = "green";
+            } else {
+                text.style.color = "black";
+                actualColor = "black";
+            }
+        }
+
+        button.onclick = changeColor;
+    </script>
+  </body>
+</html>
